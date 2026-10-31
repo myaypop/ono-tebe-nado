@@ -405,10 +405,10 @@ a {
         margin: 80px 20px;
     }
 
-    .about__column:first-child {
-        justify-content: flex-start;
-        padding: 0;
+    .about__column:nth-child(2) {
+        padding-top: 100px;
     }
+
 
     .about__logo {
         width: 180px;
