@@ -129,6 +129,7 @@ a {
 
 .aligned-text_right {
     text-align: right;
+    transform: translateX(20px);
 }
 
 .cover__description {
@@ -261,7 +262,7 @@ a {
     align-items: start;
     margin-top: 120px;
     margin-left: calc(50% - 50vw);
-    margin-bottom: 228px;
+    margin-bottom: 241px;
     padding: 0 var(--side-space);
 }
 
