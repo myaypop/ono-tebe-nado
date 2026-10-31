@@ -147,6 +147,7 @@
 /* Лоты */
 .lots {
     margin: 180px 24px 0;
+    margin-top: 170px;
 }
 
 .lots__heading {
@@ -242,12 +243,13 @@
     gap: 25px;
     align-items: start;
     margin: 180px 24px;
+    margin-top: 120px;
 }
 
 .about__column:first-child {
     display: flex;
     justify-content: center;
-    padding-top: 35px;
+    padding-top: 150px;
 }
 
 .about__column:nth-child(2) {
@@ -294,6 +296,7 @@
     align-items: start;
     margin: 0 24px;
     padding: 0 0 82px;
+    margin-top: 60px;
 }
 
 .footer__address {
