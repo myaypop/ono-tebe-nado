@@ -1,9 +1,24 @@
+:root {
+    --side-space: max(24px, calc((100vw - 1100px) / 2 + 24px));
+    --cover-space: max(50px, calc((100vw - 1100px) / 2 + 50px));
+}
+
+html {
+    overflow-x: clip;
+}
+
+a {
+    color: inherit;
+}
+
 /* Шапка */
 .header {
     display: grid;
+    width: 100vw;
     grid-template-columns: 1fr 148px 1fr;
     align-items: center;
-    padding: 92px 50px 96px;
+    margin-left: calc(50% - 50vw);
+    padding: 92px var(--cover-space) 96px;
 }
 
 .header__links-list {
@@ -66,7 +81,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin-left: calc(50% - 50vw);
-    padding: 165px 50px 50px;
+    padding: 165px var(--cover-space) 50px;
     overflow: hidden;
     color: #fff;
     background-image: url("../images/cover.jpg");
@@ -75,10 +90,9 @@
     isolation: isolate;
 }
 
-
 .overlay {
     position: absolute;
-    z-index: 0;
+    z-index: -1;
     inset: 0;
     background-color: rgb(0 0 0 / 60%);
 }
@@ -120,8 +134,8 @@
 .cover__description {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 78px;
+    justify-content: space-between;
+    gap: 24px;
 }
 
 .cover__description-text {
@@ -146,8 +160,10 @@
 
 /* Лоты */
 .lots {
-    margin: 180px 24px 0;
+    width: 100vw;
     margin-top: 170px;
+    margin-left: calc(50% - 50vw);
+    padding: 0 var(--side-space);
 }
 
 .lots__heading {
@@ -239,21 +255,24 @@
 /* Об аукционе */
 .about {
     display: grid;
+    width: 100vw;
     grid-template-columns: 334px 1fr;
     gap: 25px;
     align-items: start;
-    margin: 180px 24px;
     margin-top: 120px;
+    margin-left: calc(50% - 50vw);
+    margin-bottom: 180px;
+    padding: 0 var(--side-space);
 }
 
 .about__column:first-child {
     display: flex;
     justify-content: center;
-    padding-top: 150px;
+    padding-top: 35px;
 }
 
 .about__column:nth-child(2) {
-    padding-top: 100px;
+    padding-top: 145px;
 }
 
 .about__logo {
@@ -292,11 +311,11 @@
 /* Подвал */
 .footer {
     display: grid;
+    width: 100vw;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: start;
-    margin: 0 24px;
-    padding: 0 0 82px;
-    margin-top: 60px;
+    margin-left: calc(50% - 50vw);
+    padding: 0 var(--side-space) 82px;
 }
 
 .footer__address {
