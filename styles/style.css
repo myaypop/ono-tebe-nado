@@ -129,7 +129,6 @@ a {
 
 .aligned-text_right {
     text-align: right;
-    transform: translateX(20px);
     transform: translate(13px, 11px);
 }
 
