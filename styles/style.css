@@ -17,14 +17,14 @@ body {
     color: #000;
 }
 
-
 a {
     color: inherit;
 }
 
+/* --- Шапка --- */
 .header {
     display: grid;
-    grid-template-columns: 1fr 148px 1fr;
+    grid-template-columns: 1fr min-content 1fr;
     align-items: center;
     padding: 92px 24px 96px;
 }
@@ -89,19 +89,19 @@ a {
     margin: 0;
 }
 
+/* --- Обложка --- */
 .cover {
     position: relative;
+    background-image: url("../images/cover.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    min-height: 600px;
     display: flex;
-    min-height: 757px;
     flex-direction: column;
     justify-content: space-between;
-    padding: 165px 50px 50px;
-    overflow: hidden;
-    color: #fff;
-    background-image: url("../images/cover.jpg");
-    background-position: center;
-    background-size: cover;
-    isolation: isolate;
+    padding: 40px;
+    margin-bottom: 60px;
 }
 
 .overlay {
@@ -139,10 +139,12 @@ a {
 }
 
 .cover__description {
+    position: relative;
+    z-index: 2;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    align-items: center;
+    width: 100%;
 }
 
 .cover__description-text {
@@ -154,16 +156,18 @@ a {
 }
 
 .bet-button {
-    flex-shrink: 0;
-    padding: 12px 32px;
-    border: 1px solid #fff;
+    background-color: transparent;
     color: #fff;
-    background: transparent;
-    cursor: pointer;
-    font: inherit;
+    border: 1px solid #fff;
+    padding: 10px 30px;
     text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Raleway';
+    font-size: 16px;
+    margin-left: auto; /* Прижимает кнопку вправо! */
 }
 
+/* --- Лоты --- */
 .lots {
     margin: 180px 24px 0;
 }
@@ -255,6 +259,7 @@ a {
     text-underline-offset: 3px;
 }
 
+/* --- Об аукционе --- */
 .about {
     display: grid;
     grid-template-columns: 334px 1fr;
@@ -303,11 +308,14 @@ a {
         font-size: 16px;
     }
 
+/* --- Подвал --- */
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: start;
-    padding: 0 24px 82px;
+    padding: 40px 0;
+    border-top: 1px solid #000;
+    margin-top: 60px;
 }
 
 .footer__address {
@@ -337,109 +345,4 @@ a {
     display: block;
     width: 48px;
     height: 48px;
-}
-
-@media (max-width: 760px) {
-    .header {
-        grid-template-columns: 1fr 100px;
-        gap: 24px;
-        padding: 32px 20px;
-    }
-
-    .header__logo {
-        grid-column: 2;
-        grid-row: 1;
-        width: 100px;
-    }
-
-    .header__menu {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .header__links-list {
-        gap: 8px 16px;
-    }
-
-    .header__address {
-        grid-column: 1 / -1;
-        justify-self: start;
-    }
-
-    .cover {
-        min-height: 600px;
-        padding: 100px 24px 32px;
-    }
-
-    .cover__title {
-        font-size: 100px;
-        letter-spacing: 15px;
-    }
-
-    .cover__description {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .cover__description-text {
-        font-size: 18px;
-        word-spacing: 8px;
-    }
-
-    .lots {
-        margin: 80px 20px 0;
-    }
-
-    .lots__heading,
-    .lots__look-more-link {
-        margin-left: 0;
-    }
-
-    .lots__heading {
-        font-size: 40px;
-    }
-    
-
-    .card {
-        min-height: 420px;
-        padding: 28px;
-    }
-
-    .about {
-        grid-template-columns: 1fr;
-        margin: 80px 20px;
-    }
-
-    .about__column:first-child {
-        justify-content: flex-start;
-        padding: 0;
-    }
-
-    .about__logo {
-        width: 180px;
-        height: 180px;
-    }
-
-    .about__title {
-        margin-bottom: 32px;
-        font-size: 40px;
-    }
-
-    .footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items:start;
-        padding: 40px 0;
-        border-top: 1px solid #000;
-        margin-top: 60px;
-    }
-
-    .footer__menu-list {
-        align-items: flex-start;
-    }
-
-    .footer__social-list {
-        justify-content: flex-start;
-        gap: 24px;
-    }
 }
